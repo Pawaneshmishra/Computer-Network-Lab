@@ -77,7 +77,7 @@ public class Demo
 			}
 			System.out.printf("Sum=%c",carry);
 			stream.println(sum);
-            stream.flush();
+            		stream.flush();
 
 			for(i=0; i<length; i++)
 			{
@@ -86,26 +86,12 @@ public class Demo
 			}
 
 			if(carry=='1') carry='0';
-        	else carry='1';
+        		else carry='1';
 
 			System.out.printf("Checksum=%c",carry);
 			stream.println(complement);
 			stream.flush();
 
-			if(carry=='1') 
-			{
-				System.out.println("Error has occured");
-				System.exit(0);
-			}
-
-			for(i=0; i<complement.length; i++)
-			{
-				if(complement[i]=='1')
-				{
-					System.out.println("Error has occured");
-					System.exit(0);
-				}
-			}
 		}
 
 		else System.out.println("\nWrong input strings");
